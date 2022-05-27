@@ -1,0 +1,174 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Boogie/2.11.1": {
+        "type": "package"
+      }
+    },
+    "net6.0/any": {
+      "Boogie/2.11.1": {
+        "type": "package",
+        "tools": {
+          "tools/net6.0/any/Boogie.AbsInt.dll": {},
+          "tools/net6.0/any/Boogie.AbsInt.pdb": {},
+          "tools/net6.0/any/Boogie.BaseTypes.dll": {},
+          "tools/net6.0/any/Boogie.BaseTypes.pdb": {},
+          "tools/net6.0/any/Boogie.CodeContractsExtender.dll": {},
+          "tools/net6.0/any/Boogie.CodeContractsExtender.pdb": {},
+          "tools/net6.0/any/Boogie.Concurrency.dll": {},
+          "tools/net6.0/any/Boogie.Concurrency.pdb": {},
+          "tools/net6.0/any/Boogie.Core.dll": {},
+          "tools/net6.0/any/Boogie.Core.pdb": {},
+          "tools/net6.0/any/Boogie.ExecutionEngine.dll": {},
+          "tools/net6.0/any/Boogie.ExecutionEngine.pdb": {},
+          "tools/net6.0/any/Boogie.Graph.dll": {},
+          "tools/net6.0/any/Boogie.Graph.pdb": {},
+          "tools/net6.0/any/Boogie.Houdini.dll": {},
+          "tools/net6.0/any/Boogie.Houdini.pdb": {},
+          "tools/net6.0/any/Boogie.Model.dll": {},
+          "tools/net6.0/any/Boogie.Model.pdb": {},
+          "tools/net6.0/any/Boogie.Predication.dll": {},
+          "tools/net6.0/any/Boogie.Predication.pdb": {},
+          "tools/net6.0/any/Boogie.Provers.SMTLib.dll": {},
+          "tools/net6.0/any/Boogie.Provers.SMTLib.pdb": {},
+          "tools/net6.0/any/Boogie.VCExpr.dll": {},
+          "tools/net6.0/any/Boogie.VCExpr.pdb": {},
+          "tools/net6.0/any/Boogie.VCGeneration.dll": {},
+          "tools/net6.0/any/Boogie.VCGeneration.pdb": {},
+          "tools/net6.0/any/BoogieDriver.deps.json": {},
+          "tools/net6.0/any/BoogieDriver.dll": {},
+          "tools/net6.0/any/BoogieDriver.pdb": {},
+          "tools/net6.0/any/BoogieDriver.runtimeconfig.json": {},
+          "tools/net6.0/any/DotnetToolSettings.xml": {},
+          "tools/net6.0/any/System.Configuration.ConfigurationManager.dll": {},
+          "tools/net6.0/any/System.Runtime.Caching.dll": {},
+          "tools/net6.0/any/System.Security.Cryptography.ProtectedData.dll": {},
+          "tools/net6.0/any/System.Security.Permissions.dll": {},
+          "tools/net6.0/any/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll": {},
+          "tools/net6.0/any/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll": {},
+          "tools/net6.0/any/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Boogie/2.11.1": {
+      "sha512": "oOnaB48hEh1rfHkjwU+lx0/N4E+XE+Jl6ILuT0Yy9r5T3xt2k4gLaViOJS01EUZkHFldz12YNZnGSJzglpTN+g==",
+      "type": "package",
+      "path": "boogie/2.11.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "boogie.2.11.1.nupkg.sha512",
+        "boogie.nuspec",
+        "tools/net6.0/any/Boogie.AbsInt.dll",
+        "tools/net6.0/any/Boogie.AbsInt.pdb",
+        "tools/net6.0/any/Boogie.BaseTypes.dll",
+        "tools/net6.0/any/Boogie.BaseTypes.pdb",
+        "tools/net6.0/any/Boogie.CodeContractsExtender.dll",
+        "tools/net6.0/any/Boogie.CodeContractsExtender.pdb",
+        "tools/net6.0/any/Boogie.Concurrency.dll",
+        "tools/net6.0/any/Boogie.Concurrency.pdb",
+        "tools/net6.0/any/Boogie.Core.dll",
+        "tools/net6.0/any/Boogie.Core.pdb",
+        "tools/net6.0/any/Boogie.ExecutionEngine.dll",
+        "tools/net6.0/any/Boogie.ExecutionEngine.pdb",
+        "tools/net6.0/any/Boogie.Graph.dll",
+        "tools/net6.0/any/Boogie.Graph.pdb",
+        "tools/net6.0/any/Boogie.Houdini.dll",
+        "tools/net6.0/any/Boogie.Houdini.pdb",
+        "tools/net6.0/any/Boogie.Model.dll",
+        "tools/net6.0/any/Boogie.Model.pdb",
+        "tools/net6.0/any/Boogie.Predication.dll",
+        "tools/net6.0/any/Boogie.Predication.pdb",
+        "tools/net6.0/any/Boogie.Provers.SMTLib.dll",
+        "tools/net6.0/any/Boogie.Provers.SMTLib.pdb",
+        "tools/net6.0/any/Boogie.VCExpr.dll",
+        "tools/net6.0/any/Boogie.VCExpr.pdb",
+        "tools/net6.0/any/Boogie.VCGeneration.dll",
+        "tools/net6.0/any/Boogie.VCGeneration.pdb",
+        "tools/net6.0/any/BoogieDriver.deps.json",
+        "tools/net6.0/any/BoogieDriver.dll",
+        "tools/net6.0/any/BoogieDriver.pdb",
+        "tools/net6.0/any/BoogieDriver.runtimeconfig.json",
+        "tools/net6.0/any/DotnetToolSettings.xml",
+        "tools/net6.0/any/System.Configuration.ConfigurationManager.dll",
+        "tools/net6.0/any/System.Runtime.Caching.dll",
+        "tools/net6.0/any/System.Security.Cryptography.ProtectedData.dll",
+        "tools/net6.0/any/System.Security.Permissions.dll",
+        "tools/net6.0/any/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll",
+        "tools/net6.0/any/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll",
+        "tools/net6.0/any/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "boogie >= *"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\huang\\.dotnet\\tools\\.store\\.stage\\3p2qrd24.nxg": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\huang\\AppData\\Local\\Temp\\jqnoptfq.3ds\\restore.csproj",
+      "projectName": "restore",
+      "projectPath": "C:\\Users\\huang\\AppData\\Local\\Temp\\jqnoptfq.3ds\\restore.csproj",
+      "packagesPath": "C:\\Users\\huang\\.dotnet\\tools\\.store\\.stage\\3p2qrd24.nxg",
+      "outputPath": "C:\\Users\\huang\\.dotnet\\tools\\.store\\.stage\\3p2qrd24.nxg\\",
+      "projectStyle": "DotnetToolReference",
+      "configFilePaths": [
+        "C:\\Users\\huang\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "boogie": {
+            "target": "Package",
+            "version": "[*, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "any": {
+        "#import": []
+      }
+    }
+  }
+}
