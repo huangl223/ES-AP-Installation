@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<system xmlns="http://www.eiffel.com/developers/xml/configuration-1-22-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-22-0 http://www.eiffel.com/developers/xml/configuration-1-22-0.xsd" name="binary_search" uuid="AF673CEC-3DD0-4317-97C9-19093A63F47F">
+	<target name="binary_search">
+		<root class="APPLICATION" feature="make"/>
+		<file_rule>
+			<exclude>/CVS$</exclude>
+			<exclude>/EIFGENs$</exclude>
+			<exclude>/\.git$</exclude>
+			<exclude>/\.svn$</exclude>
+		</file_rule>
+		<option warning="warning" is_obsolete_iteration="false" manifest_array_type="mismatch_warning">
+			<assertions precondition="true" postcondition="true" check="true" invariant="true" loop="true" supplier_precondition="true"/>
+		</option>
+		<setting name="console_application" value="true"/>
+		<setting name="total_order_on_reals" value="false"/>
+		<setting name="dead_code_removal" value="feature"/>
+		<library name="base" location="$AP\library\base\base-safe-scoop.ecf" readonly="false">
+			<option warning="none">
+			</option>
+		</library>
+		<library name="testing" location="$ISE_EIFFEL\library\testing\testing_ap.ecf">
+			<option warning="none">
+			</option>
+		</library>
+		<cluster name="binary_search" location=".\" recursive="true">
+			<option warning="none" is_obsolete_iteration="false" manifest_array_type="mismatch_warning">
+			</option>
+		</cluster>
+	</target>
+</system>

@@ -13,15 +13,15 @@
 		<capability>
 			<concurrency support="scoop" use="thread"/>
 		</capability>
-		<library name="base" location="$AP\library\base\base-safe-scoop.ecf"/>
-		<library name="diff" location="$ISE_LIBRARY\library\diff\diff_ap.ecf"/>
-		<library name="net" location="$ISE_LIBRARY\library\net\net_ap.ecf"/>
-		<library name="process" location="$ISE_LIBRARY\library\process\process.ecf">
+		<library name="base" location="$AP\base-scoop-safe.ecf"/>
+		<library name="diff" location="$ISE_EIFFEL\library\diff\diff_ap.ecf"/>
+		<library name="net" location="$ISE_EIFFEL\library\net\net_ap.ecf"/>
+		<library name="process" location="$ISE_EIFFEL\library\process\process.ecf">
 			<condition>
 				<concurrency value="thread"/>
 			</condition>
 		</library>
-		<library name="time" location="$ISE_LIBRARY\library\time\time_ap.ecf"/>
+		<library name="time" location="$ISE_EIFFEL\library\time\time_ap.ecf"/>
 		<assembly name="eiffelsoftware_runtime" location="$ISE_EIFFEL\studio\spec\$ISE_PLATFORM\lib\EiffelSoftware.Runtime.dll"/>
 		<cluster name="etf" location=".\etf\" recursive="true"/>
 		<cluster name="testing" location=".\" recursive="true">

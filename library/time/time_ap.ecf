@@ -29,7 +29,7 @@
 				<platform excluded_value="windows"/>
 			</condition>
 		</external_include>
-		<library name="base" location="$AP\library\base\base-safe-scoop.ecf"/>
+		<library name="base" location="$AP\base-scoop-safe.ecf"/>
 		<assembly name="mscorlib" location="$ISE_DOTNET_FRAMEWORK\mscorlib.dll">
 			<renaming old_name="INTERFACE_TYPE_ATTRIBUTE" new_name="SYSTEM_INTERFACE_TYPE_ATTRIBUTE"/>
 			<renaming old_name="ENCODING" new_name="SYSTEM_ENCODING"/>
