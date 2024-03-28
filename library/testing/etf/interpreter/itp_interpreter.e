@@ -55,6 +55,7 @@ feature {NONE} -- Initialization
 			l_server_url: IMMUTABLE_STRING_32
 			l_port: INTEGER
 		do
+		print ("intepreter6%N")
 			if argument_count /= 5 then
 				check Wrong_number_of_arguments: False end
 			end
