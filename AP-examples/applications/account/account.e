@@ -1,7 +1,4 @@
-﻿note
-	explicit: "all"
-
-class
+﻿class
 	ACCOUNT
 
 create
@@ -25,6 +22,7 @@ feature -- Access
 
 	balance: INTEGER
 			-- Balance of this account.
+
 	credit_limit: INTEGER
 			-- Credit limit of this account.
 
@@ -32,60 +30,48 @@ feature -- Access
 			-- Amount available on this account.
 		note
 			status: functional
-		require
-			reads_field (["credit_limit", "balance"], Current)
 		do
 			Result := balance - credit_limit
-
 		end
 
 feature -- Basic operations
 
---	set_credit_limit (limit: INTEGER)
---			-- Set `credit_limit' to `limit'.
---		require
---			limit_not_positive: limit <= 0
---			limit_valid: limit <= balance
---		do
---			credit_limit := limit
---		ensure
---			modify_field (["credit_limit"], Current)
---			credit_limit_set: credit_limit = limit
---		end
+	set_credit_limit (limit: INTEGER)
+			-- Set `credit_limit' to `limit'.
+		require
+			limit_not_positive: limit <= 0
+			limit_valid: limit <= balance
+		do
+			credit_limit := limit
+		ensure
+			modify_field (["credit_limit", "closed"], Current)
+			credit_limit_set: credit_limit = limit
+		end
 
 	deposit (amount: INTEGER)
-			-- Deposit `amount� in this account.
+			-- Deposit `amount' in this account.
 		require
-				-- amount_non_negative: amount >= 0
-			balance >= credit_limit
-			0 >= credit_limit
-			-- balance_value: balance <= 10
-			-- credit_limit_value: credit_limit <= 20
+			amount >= 0
+			-- amount <= 10
 		do
 			balance := balance + amount
 		ensure
-			modify_field (["balance"], Current)
-				-- balance_set: balance = old balance + amount
+			modify_field (["balance", "closed"], Current)
 			balance_increased: balance >= old balance
-				-- 0 >= credit_limit
+			balance_set: balance = old balance + amount
 		end
 
 	withdraw (amount: INTEGER)
-			-- Withdraw `amount' from this bank account.
+			-- Withdraw `amount' from this account.
 		require
 			amount_not_negative: amount >= 0
-			balance >= credit_limit
-			0 >= credit_limit
-			amount <= available_amount
-			-- balance <= 10
-			-- credit_limit <= 20
+			amount_available: amount <= available_amount
 		do
-			balance := balance + amount
+			balance := balance - amount
 		ensure
-			modify_field (["balance"], Current)
+			modify_field (["balance", "closed"], Current)
 			balance_set: balance = old balance - amount
-			balance >= credit_limit
-			0 >= credit_limit
+			balance_decrease: balance <= old balance
 		end
 
 	transfer (amount: INTEGER; other: ACCOUNT)
@@ -93,30 +79,20 @@ feature -- Basic operations
 		note
 			explicit: wrapping
 		require
-			other /= Void
-			amount_not_negative: amount > 0 and 0 >= credit_limit and 0 >= other.credit_limit
+			amount_not_negative: amount >= 0
 			amount_available: amount <= available_amount
-			balance_non_negative: balance >= credit_limit and other.balance >= other.credit_limit
-			balance <= 10
-			credit_limit <= 20
-			-- not_alias: Current /= other
-		--local
-		   -- temp_account: ACCOUNT
+			other /= Current
 		do
-			-- create temp_account.make
-			-- temp_account.deposit (100)
 			withdraw (amount)
 			other.deposit (amount)
 		ensure
 			modify_field (["balance", "closed"], [Current, other])
 			withdrawal_made: balance = old balance - amount
-			deposit_made: other.balance = old other.balance + amount
+			despoit_made: other.balance = old other.balance + amount
 		end
 
 invariant
-	 credit_limit_not_positive: 0 >= available_amount
-	--   balance_value: balance <= 10
-	-- credit_limit_value: credit_limit <= 20
-	-- balance_non_negative: balance >= credit_limit
+	credit_limit_not_positive: 0 >= credit_limit
+	balance_non_negative: balance >= credit_limit
 
 end
